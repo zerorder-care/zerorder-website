@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "tw-animate-css";
+
+@layer base {
+  :root {
+    /* Zerorder Design System - Modern Medical Minimalism */
+    /* Primary Colors */
+    --primary: #0066CC;
+    --primary-foreground: #FFFFFF;
+    --secondary: #FF6B6B;
+    --secondary-foreground: #FFFFFF;
+    --accent: #00D084;
+    --accent-foreground: #FFFFFF;
+    
+    /* Neutral Colors */
+    --background: #FFFFFF;
+    --foreground: #1A1A1A;
+    --card: #F5F5F5;
+    --card-foreground: #1A1A1A;
+    --muted: #E8E8E8;
+    --muted-foreground: #666666;
+    --border: #E0E0E0;
+    --input: #F5F5F5;
+    
+    /* UI Elements */
+    --destructive: #FF6B6B;
+    --destructive-foreground: #FFFFFF;
+    --ring: #0066CC;
+    
+    /* Sidebar */
+    --sidebar: #FFFFFF;
+    --sidebar-foreground: #1A1A1A;
+    --sidebar-primary: #0066CC;
+    --sidebar-primary-foreground: #FFFFFF;
+    --sidebar-accent: #FF6B6B;
+    --sidebar-accent-foreground: #FFFFFF;
+    --sidebar-border: #E0E0E0;
+    --sidebar-ring: #0066CC;
+    
+    /* Chart Colors */
+    --chart-1: #0066CC;
+    --chart-2: #FF6B6B;
+    --chart-3: #00D084;
+    --chart-4: #FFB347;
+    --chart-5: #6B7FFF;
+    
+    /* Radius */
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --primary: 220 70% 45%;
+    --primary-foreground: 220 70% 95%;
+    --sidebar-primary: 220 70% 50%;
+    --sidebar-primary-foreground: 220 70% 95%;
+    --background: 220 5% 10%;
+    --foreground: 220 5% 85%;
+    --card: 220 5% 15%;
+    --card-foreground: 220 5% 85%;
+    --popover: 220 5% 15%;
+    --popover-foreground: 220 5% 85%;
+    --secondary: 220 5% 20%;
+    --secondary-foreground: 220 5% 70%;
+    --muted: 220 5% 25%;
+    --muted-foreground: 220 5% 70%;
+    --accent: 220 5% 25%;
+    --accent-foreground: 220 5% 92%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 5% 20%;
+    --input: 220 5% 20%;
+    --ring: 220 50% 50%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 220 70% 60%;
+    --chart-3: 220 70% 70%;
+    --chart-4: 220 70% 80%;
+    --chart-5: 220 70% 90%;
+    --sidebar: 220 5% 15%;
+    --sidebar-foreground: 220 5% 85%;
+    --sidebar-accent: 220 5% 25%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 220 5% 20%;
+    --sidebar-ring: 220 50% 50%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+  
+  p {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+  
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+  
+  /* Smooth transitions for interactive elements */
+  a, button, input, select, textarea {
+    @apply transition-all duration-200;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+  
+  /* Zerorder specific components */
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32 px-4;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8;
+  }
+  
+  .section-subtitle {
+    @apply text-lg md:text-xl mb-12 md:mb-16;
+    color: var(--muted-foreground);
+  }
+  
+  .gradient-text {
+    background: linear-gradient(135deg, #0066CC 0%, #FF6B6B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:scale-105;
+  }
+  
+  .button-primary {
+    @apply px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-all duration-200;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+  }
+  
+  .button-secondary {
+    @apply px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-all duration-200;
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+  }
+  
+  .button-outline {
+    @apply border-2 px-6 py-3 rounded-lg font-semibold transition-all duration-200;
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+  
+  .button-outline:hover {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+}
