@@ -46,6 +46,7 @@
   "exclude": [
     "node_modules",
     "client",
-    "server"
+    "server",
+    "vite.config.ts"
   ]
 }
