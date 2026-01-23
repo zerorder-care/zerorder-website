@@ -34,11 +34,6 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          <Link href="/#about">
-            <a className="text-foreground hover:text-primary transition-colors font-medium">
-              About
-            </a>
-          </Link>
           <Link href="/team">
             <a className="text-foreground hover:text-primary transition-colors font-medium">
               Team
@@ -75,14 +70,6 @@ export default function Header() {
       {isMenuOpen && (
         <div className="md:hidden border-t border-border bg-white">
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
-            <Link href="/#about">
-              <a
-                className="text-foreground hover:text-primary transition-colors font-medium py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About
-              </a>
-            </Link>
             <Link href="/team">
               <a
                 className="text-foreground hover:text-primary transition-colors font-medium py-2"
