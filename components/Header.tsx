@@ -9,21 +9,35 @@ import { Menu, X } from "lucide-react";
  * Design: Modern Medical Minimalism
  * - Clean navigation with Zerorder branding
  * - Responsive mobile menu
- * - Smooth transitions and hover effects
+ * - Language toggle (KO | EN)
  */
 
-export default function Header() {
+interface HeaderProps {
+  locale?: "ko" | "en";
+}
+
+export default function Header({ locale = "ko" }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Generate paths based on locale
+  const basePath = locale === "en" ? "/en" : "";
+  const homePath = locale === "en" ? "/en" : "/";
+  const teamPath = `${basePath}/team`;
+  const contactPath = `${basePath}/contact`;
+
+  // Language toggle paths (switch to the other language on current page type)
+  const koPath = "/";
+  const enPath = "/en";
+
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-border shadow-sm">
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+        <Link href={homePath} className="flex items-center gap-2 hover:opacity-80 transition-opacity">
           <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
             <span className="text-white font-bold text-lg">Z</span>
           </div>
@@ -34,15 +48,39 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          <Link href="/team" className="text-foreground hover:text-primary transition-colors font-medium">
+          <Link href={teamPath} className="text-foreground hover:text-primary transition-colors font-medium">
             Team
           </Link>
           <Link
-            href="/contact"
+            href={contactPath}
             className="bg-primary text-primary-foreground px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity"
           >
             Contact
           </Link>
+          {/* Language Toggle */}
+          <div className="flex items-center gap-1 text-sm font-medium">
+            <Link
+              href={koPath}
+              className={`px-2 py-1 rounded transition-colors ${
+                locale === "ko"
+                  ? "text-primary font-semibold"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              KO
+            </Link>
+            <span className="text-muted-foreground">|</span>
+            <Link
+              href={enPath}
+              className={`px-2 py-1 rounded transition-colors ${
+                locale === "en"
+                  ? "text-primary font-semibold"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              EN
+            </Link>
+          </div>
         </div>
 
         {/* Mobile Menu Button */}
@@ -64,19 +102,45 @@ export default function Header() {
         <div className="md:hidden border-t border-border bg-white">
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
             <Link
-              href="/team"
+              href={teamPath}
               className="text-foreground hover:text-primary transition-colors font-medium py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Team
             </Link>
             <Link
-              href="/contact"
+              href={contactPath}
               className="bg-primary text-primary-foreground px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity text-center"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
             </Link>
+            {/* Mobile Language Toggle */}
+            <div className="flex items-center justify-center gap-2 pt-2 border-t border-border">
+              <Link
+                href={koPath}
+                className={`px-3 py-1 rounded transition-colors ${
+                  locale === "ko"
+                    ? "text-primary font-semibold"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                KO
+              </Link>
+              <span className="text-muted-foreground">|</span>
+              <Link
+                href={enPath}
+                className={`px-3 py-1 rounded transition-colors ${
+                  locale === "en"
+                    ? "text-primary font-semibold"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                EN
+              </Link>
+            </div>
           </div>
         </div>
       )}
