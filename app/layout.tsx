@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider as NextThemeProvider } from "next-themes";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -37,6 +38,7 @@ export default function RootLayout({
             <Toaster />
           </TooltipProvider>
         </NextThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
