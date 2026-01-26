@@ -115,7 +115,7 @@ export default function Team() {
             <div className="text-center mb-16">
               <h2 className="section-title">Zerorder 팀을 만나보세요</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                의료 전문가, 소프트웨어 엔지니어, 디자이너 등 다양한 분야의 전문가들이 함께 일하고 있습니다. 우리는 영아 사경 문제를 해결하기 위해 최선을 다하고 있습니다.
+                소프트웨어 엔지니어, 디자이너 등 다양한 분야의 전문가들이 함께 일하고 있습니다. 우리는 영아 사경 문제를 해결하기 위해 최선을 다하고 있습니다.
               </p>
             </div>
           </div>
@@ -222,7 +222,7 @@ export default function Team() {
               {[
                 {
                   title: "신뢰성",
-                  description: "의료 전문가와 협력하여 과학 기반의 솔루션 제공",
+                  description: "과학적 연구에 기반한 솔루션 제공",
                 },
                 {
                   title: "접근성",

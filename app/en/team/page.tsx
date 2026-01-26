@@ -100,7 +100,7 @@ export default function TeamEN() {
               Our Team
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              A team of experts bridging medicine and technology to protect your baby&apos;s health
+              A team of experts leveraging technology to protect your baby&apos;s health
             </p>
           </div>
         </section>
@@ -111,7 +111,7 @@ export default function TeamEN() {
             <div className="text-center mb-16">
               <h2 className="section-title">Meet the Zerorder Team</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Our team brings together medical professionals, software engineers, and designers working to solve the infant torticollis problem.
+                Our team brings together software engineers and designers working to solve the infant torticollis problem.
               </p>
             </div>
           </div>
@@ -218,7 +218,7 @@ export default function TeamEN() {
               {[
                 {
                   title: "Reliability",
-                  description: "Science-based solutions developed in collaboration with medical professionals",
+                  description: "Science-based solutions grounded in research",
                 },
                 {
                   title: "Accessibility",
