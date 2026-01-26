@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 /**
@@ -9,7 +10,7 @@ import { Menu, X } from "lucide-react";
  * Design: Modern Medical Minimalism
  * - Clean navigation with Zerorder branding
  * - Responsive mobile menu
- * - Language toggle (KO | EN)
+ * - Language toggle (KO | EN) - preserves current page
  */
 
 interface HeaderProps {
@@ -18,6 +19,7 @@ interface HeaderProps {
 
 export default function Header({ locale = "ko" }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -29,9 +31,23 @@ export default function Header({ locale = "ko" }: HeaderProps) {
   const teamPath = `${basePath}/team`;
   const contactPath = `${basePath}/contact`;
 
-  // Language toggle paths (switch to the other language on current page type)
-  const koPath = "/";
-  const enPath = "/en";
+  // Language toggle paths - preserve current page
+  const getLocalizedPath = (targetLocale: "ko" | "en") => {
+    // Remove /en prefix if present to get the base path
+    const pathWithoutLocale = pathname.startsWith("/en")
+      ? pathname.slice(3) || "/"
+      : pathname;
+
+    // Build path for target locale
+    if (targetLocale === "en") {
+      return pathWithoutLocale === "/" ? "/en" : `/en${pathWithoutLocale}`;
+    } else {
+      return pathWithoutLocale || "/";
+    }
+  };
+
+  const koPath = getLocalizedPath("ko");
+  const enPath = getLocalizedPath("en");
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-border shadow-sm">
