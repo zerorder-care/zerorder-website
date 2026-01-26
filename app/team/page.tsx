@@ -10,6 +10,11 @@ import Footer from "@/components/Footer";
  * - Recruitment section
  */
 
+interface CareerItem {
+  company: string;
+  period: string;
+}
+
 interface TeamMember {
   id: number;
   name: string;
@@ -17,6 +22,7 @@ interface TeamMember {
   role: string;
   team?: string;
   bio: string;
+  career?: CareerItem[];
   image?: string;
   imagePosition?: string;
   email: string;
@@ -30,6 +36,12 @@ const teamMembers: TeamMember[] = [
     englishName: "David",
     role: "CEO",
     bio: "Zerorder를 이끌며 영아 사경 문제 해결을 위한 비전을 실현합니다.",
+    career: [
+      { company: "Zerorder", period: "2023.09 - 현재" },
+      { company: "Samsung Medison", period: "2021.05 - 2021.09" },
+      { company: "Johnson & Johnson (CERENOVUS)", period: "2019.01 - 2021.02" },
+      { company: "CJ CheilJedang", period: "2013.12 - 2017.12" },
+    ],
     image: "/images/team/Zerorder_David.png",
     imagePosition: "center 30%",
     email: "ceo@zerorder.kr",
@@ -122,13 +134,27 @@ export default function Team() {
         </section>
 
         {/* Team Members Grid */}
+        {/* 
+          [디자인 옵션 메모]
+          
+          옵션 1: CEO 별도 섹션 분리
+          - CEO를 팀 소개 바로 아래에 별도로 크게 표시
+          - 좌측에 사진, 우측에 정보 + 경력 (가로 레이아웃)
+          - 나머지 팀원들은 동일한 카드 그리드로 표시
+          - 구현: teamMembers를 CEO와 나머지로 분리하여 두 섹션으로 렌더링
+          
+          옵션 4: 매거진 스타일 2열 레이아웃
+          - CEO를 좌측에 크게 (전체 높이 차지)
+          - 나머지 팀원들을 우측에 2x3 또는 3x2 그리드로 배치
+          - CSS Grid의 grid-row-span 활용
+        */}
         <section className="section-padding bg-card">
           <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {teamMembers.map((member) => (
                 <div
                   key={member.id}
-                  className="bg-white rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all duration-300 card-hover"
+                  className="group bg-white rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all duration-300 card-hover flex flex-col"
                 >
                   {/* Member Photo */}
                   <div className="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center overflow-hidden">
@@ -158,12 +184,27 @@ export default function Team() {
                       {member.team && <span className="text-muted-foreground">{member.team} · </span>}
                       {member.role}
                     </p>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                       {member.bio}
                     </p>
 
+                    {/* Career History - hover 시에만 표시 */}
+                    {member.career && (
+                      <div className="mb-4 max-h-0 overflow-hidden opacity-0 group-hover:max-h-40 group-hover:opacity-100 transition-all duration-300 ease-in-out">
+                        <p className="text-xs font-semibold text-foreground mb-2">경력</p>
+                        <ul className="space-y-1">
+                          {member.career.map((item, idx) => (
+                            <li key={idx} className="text-xs text-muted-foreground">
+                              <span className="font-medium">{item.company}</span>
+                              <span className="block text-[10px] opacity-70">{item.period}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
                     {/* Social Links */}
-                    <div className="flex gap-3">
+                    <div className="flex gap-3 pt-2">
                       {member.linkedin && (
                         <a
                           href={member.linkedin}

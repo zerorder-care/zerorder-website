@@ -6,6 +6,11 @@ import Footer from "@/components/Footer";
  * English Team Page
  */
 
+interface CareerItem {
+  company: string;
+  period: string;
+}
+
 interface TeamMember {
   id: number;
   name: string;
@@ -13,6 +18,7 @@ interface TeamMember {
   role: string;
   team?: string;
   bio: string;
+  career?: CareerItem[];
   image?: string;
   imagePosition?: string;
   email: string;
@@ -26,6 +32,12 @@ const teamMembers: TeamMember[] = [
     englishName: "David",
     role: "CEO",
     bio: "Leading Zerorder to realize our vision of solving infant torticollis.",
+    career: [
+      { company: "Zerorder", period: "Sep 2023 - Present" },
+      { company: "Samsung Medison", period: "May 2021 - Sep 2021" },
+      { company: "Johnson & Johnson (CERENOVUS)", period: "Jan 2019 - Feb 2021" },
+      { company: "CJ CheilJedang", period: "Dec 2013 - Dec 2017" },
+    ],
     image: "/images/team/Zerorder_David.png",
     imagePosition: "center 30%",
     email: "ceo@zerorder.kr",
@@ -118,13 +130,27 @@ export default function TeamEN() {
         </section>
 
         {/* Team Members Grid */}
+        {/* 
+          [Design Options Memo]
+          
+          Option 1: Separate CEO Section
+          - Display CEO prominently below team intro
+          - Photo on left, info + career on right (horizontal layout)
+          - Other team members in uniform card grid
+          - Implementation: Split teamMembers into CEO and others, render in two sections
+          
+          Option 4: Magazine-style 2-column Layout
+          - CEO on left side (full height)
+          - Other team members in 2x3 or 3x2 grid on right
+          - Use CSS Grid's grid-row-span
+        */}
         <section className="section-padding bg-card">
           <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {teamMembers.map((member) => (
                 <div
                   key={member.id}
-                  className="bg-white rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all duration-300 card-hover"
+                  className="group bg-white rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all duration-300 card-hover flex flex-col"
                 >
                   {/* Member Photo */}
                   <div className="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center overflow-hidden">
@@ -154,12 +180,27 @@ export default function TeamEN() {
                       {member.team && <span className="text-muted-foreground">{member.team} · </span>}
                       {member.role}
                     </p>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                       {member.bio}
                     </p>
 
+                    {/* Career History - visible on hover only */}
+                    {member.career && (
+                      <div className="mb-4 max-h-0 overflow-hidden opacity-0 group-hover:max-h-40 group-hover:opacity-100 transition-all duration-300 ease-in-out">
+                        <p className="text-xs font-semibold text-foreground mb-2">Career</p>
+                        <ul className="space-y-1">
+                          {member.career.map((item, idx) => (
+                            <li key={idx} className="text-xs text-muted-foreground">
+                              <span className="font-medium">{item.company}</span>
+                              <span className="block text-[10px] opacity-70">{item.period}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
                     {/* Social Links */}
-                    <div className="flex gap-3">
+                    <div className="flex gap-3 pt-2">
                       {member.linkedin && (
                         <a
                           href={member.linkedin}
