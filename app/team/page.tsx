@@ -13,60 +13,81 @@ import Footer from "@/components/Footer";
 interface TeamMember {
   id: number;
   name: string;
+  englishName: string;
   role: string;
-  expertise: string;
+  team?: string;
   bio: string;
+  image?: string;
+  imagePosition?: string;
+  email: string;
   linkedin?: string;
 }
 
 const teamMembers: TeamMember[] = [
   {
     id: 1,
-    name: "김준호",
-    role: "CEO & Founder",
-    expertise: "의료 기술, 사업 전략",
-    bio: "의료 배경의 기업가로서 영아 사경 문제 해결을 위해 Zerorder를 창립했습니다.",
-    linkedin: "#",
+    name: "심예준",
+    englishName: "David",
+    role: "CEO",
+    bio: "Zerorder를 이끌며 영아 사경 문제 해결을 위한 비전을 실현합니다.",
+    image: "/images/team/Zerorder_David.png",
+    imagePosition: "center 30%",
+    email: "ceo@zerorder.kr",
+    linkedin: "https://www.linkedin.com/in/yejoonsim",
   },
   {
     id: 2,
-    name: "이소연",
-    role: "CTO",
-    expertise: "소프트웨어 엔지니어링, AI/ML",
-    bio: "10년 이상의 소프트웨어 개발 경험으로 도리도리의 기술 기반을 구축했습니다.",
-    linkedin: "#",
+    name: "엄태윤",
+    englishName: "Theo",
+    role: "UI/UX Designer",
+    bio: "사용자 중심의 직관적인 디자인으로 도리도리의 경험을 설계합니다.",
+    image: "/images/team/Zerorder_Theo.JPG",
+    email: "theo@zerorder.kr",
+    linkedin: "https://www.linkedin.com/in/aum-taeyun-엄태윤-2aa420256",
   },
   {
     id: 3,
-    name: "박의준",
-    role: "Medical Advisor",
-    expertise: "소아과, 임상 연구",
-    bio: "대학병원 소아과 전문의로서 도리도리의 의료 신뢰성을 보장합니다.",
+    name: "송고은",
+    englishName: "Liv",
+    role: "UI/UX Designer",
+    bio: "따뜻하고 접근성 높은 디자인으로 부모와 아기 모두를 위한 경험을 만듭니다.",
+    image: "/images/team/placeholder-user.png",
+    imagePosition: "contain",
+    email: "liv@zerorder.kr",
     linkedin: "#",
   },
   {
     id: 4,
-    name: "정민준",
-    role: "AI/ML Engineer",
-    expertise: "머신러닝, 컴퓨터 비전",
-    bio: "컴퓨터 비전 기술로 아기의 머리 모양을 정확하게 분석합니다.",
-    linkedin: "#",
+    name: "김진욱",
+    englishName: "Louis",
+    role: "Tech Lead",
+    team: "Tech Team",
+    bio: "Zerorder Tech Team을 이끌며 안정적인 기술 기반을 구축합니다.",
+    image: "/images/team/Zerorder_Lois.JPG",
+    email: "louis@zerorder.kr",
+    linkedin: "https://www.linkedin.com/in/glazedbream",
   },
   {
     id: 5,
-    name: "최지은",
-    role: "Product Manager",
-    expertise: "제품 관리, 사용자 경험",
-    bio: "부모들의 니즈를 중심으로 도리도리의 제품을 지속적으로 개선합니다.",
-    linkedin: "#",
+    name: "윤유상",
+    englishName: "Bob",
+    role: "Software Engineer",
+    team: "Tech Team",
+    bio: "도리도리의 핵심 기능을 개발하며 사용자 경험을 향상시킵니다.",
+    image: "/images/team/Zerorder_Bob.JPG",
+    email: "bob@zerorder.kr",
+    linkedin: "https://www.linkedin.com/in/yoosang-yoon-04945427a/",
   },
   {
     id: 6,
-    name: "이현지",
-    role: "UI/UX Designer",
-    expertise: "디자인, 사용성",
-    bio: "따뜻하고 직관적인 디자인으로 사용자 경험을 최우선으로 합니다.",
-    linkedin: "#",
+    name: "한진우",
+    englishName: "Max",
+    role: "Software Engineer",
+    team: "Tech Team",
+    bio: "견고하고 확장 가능한 소프트웨어를 개발합니다.",
+    image: "/images/team/Zerorder_Max.JPG",
+    email: "max@zerorder.kr",
+    linkedin: "https://www.linkedin.com/in/jinwoohan0122",
   },
 ];
 
@@ -109,23 +130,33 @@ export default function Team() {
                   key={member.id}
                   className="bg-white rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all duration-300 card-hover"
                 >
-                  {/* Avatar Placeholder */}
-                  <div className="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                    <div className="w-24 h-24 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white text-3xl font-bold">
-                      {member.name.charAt(0)}
-                    </div>
+                  {/* Member Photo */}
+                  <div className="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center overflow-hidden">
+                    {member.image ? (
+                      <img
+                        src={member.image}
+                        alt={`${member.name} (${member.englishName})`}
+                        className={`w-full h-full ${member.imagePosition === "contain" ? "object-contain p-4" : "object-cover"}`}
+                        style={member.imagePosition && member.imagePosition !== "contain" ? { objectPosition: member.imagePosition } : undefined}
+                      />
+                    ) : (
+                      <div className="w-24 h-24 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white text-3xl font-bold">
+                        {member.name.charAt(0)}
+                      </div>
+                    )}
                   </div>
 
                   {/* Member Info */}
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-foreground mb-1">
                       {member.name}
+                      <span className="text-muted-foreground font-normal text-base ml-2">
+                        {member.englishName}
+                      </span>
                     </h3>
                     <p className="text-primary font-semibold text-sm mb-2">
+                      {member.team && <span className="text-muted-foreground">{member.team} · </span>}
                       {member.role}
-                    </p>
-                    <p className="text-sm text-muted-foreground mb-4">
-                      {member.expertise}
                     </p>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-6">
                       {member.bio}
@@ -136,6 +167,8 @@ export default function Team() {
                       {member.linkedin && (
                         <a
                           href={member.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-200"
                           aria-label="LinkedIn"
                         >
@@ -143,7 +176,7 @@ export default function Team() {
                         </a>
                       )}
                       <a
-                        href="#"
+                        href={`mailto:${member.email}`}
                         className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-200"
                         aria-label="Email"
                       >
@@ -220,28 +253,6 @@ export default function Team() {
           </div>
         </section>
 
-        {/* Recruitment */}
-        <section className="section-padding bg-white">
-          <div className="container mx-auto max-w-3xl text-center">
-            <h2 className="section-title">함께 일할 인재를 찾고 있습니다</h2>
-            <p className="section-subtitle">
-              Zerorder와 함께 영아 사경 문제를 해결하고 싶으신 분들을 기다립니다
-            </p>
-
-            <div className="bg-gradient-to-br from-primary/10 to-secondary/10 p-12 rounded-2xl border border-primary/20 mb-8">
-              <p className="text-lg text-foreground mb-6">
-                현재 채용 공고는 준비 중입니다. 관심이 있으신 분은 아래 이메일로 연락주세요.
-              </p>
-              <a
-                href="mailto:careers@zerorder.com"
-                className="inline-flex items-center gap-2 button-primary"
-              >
-                <Mail className="w-5 h-5" />
-                careers@zerorder.com
-              </a>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />
