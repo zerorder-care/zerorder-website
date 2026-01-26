@@ -131,8 +131,8 @@ export default function Contact() {
                   주소
                 </h3>
                 <p className="text-muted-foreground">
-                  서울시 강남구 테헤란로 123<br />
-                  Zerorder 빌딩
+                  서울 동대문구 회기로 117-3<br />
+                  서울바이오허브 산업지원동 405호
                 </p>
               </div>
             </div>

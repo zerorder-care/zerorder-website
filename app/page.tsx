@@ -42,12 +42,12 @@ export default function Home() {
                 도리도리는 AI 기반 Home-Based 테라피로 영아 사경 재활을 돕는 솔루션입니다. 의료를 대신하기보다, 집에서 편하게 재활할 수 있도록 돕는 프로덕트를 만들고 있습니다.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="button-primary flex items-center justify-center gap-2">
-                  앱 다운로드
-                  <ArrowRight className="w-5 h-5" />
-                </button>
-                <a href="#about" className="button-outline flex items-center justify-center gap-2">
+                <a href="#about" className="button-primary flex items-center justify-center gap-2">
                   자세히 알아보기
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+                <a href="/contact" className="button-outline flex items-center justify-center gap-2">
+                  문의하기
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
@@ -299,22 +299,22 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section id="download" className="section-padding bg-gradient-to-r from-primary/10 to-secondary/10">
+        <section id="cta" className="section-padding bg-gradient-to-r from-primary/10 to-secondary/10">
           <div className="container mx-auto">
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="section-title">
-                지금 바로 시작하세요
+                함께 만들어가요
               </h2>
               <p className="section-subtitle">
-                AI 기반 Home-Based 테라피로 집에서 편하게 재활을 시작하세요
+                도리도리에 관심이 있으시거나 협업을 원하시면 언제든 연락주세요
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="button-primary flex items-center justify-center gap-2">
-                  앱 다운로드
-                  <ArrowRight className="w-5 h-5" />
-                </button>
-                <a href="/contact" className="button-outline flex items-center justify-center gap-2">
+                <a href="/contact" className="button-primary flex items-center justify-center gap-2">
                   문의하기
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+                <a href="/team" className="button-outline flex items-center justify-center gap-2">
+                  팀 소개 보기
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </div>

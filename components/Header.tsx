@@ -37,15 +37,12 @@ export default function Header() {
           <Link href="/team" className="text-foreground hover:text-primary transition-colors font-medium">
             Team
           </Link>
-          <Link href="/contact" className="text-foreground hover:text-primary transition-colors font-medium">
-            Contact
-          </Link>
-          <a
-            href="#download"
+          <Link
+            href="/contact"
             className="bg-primary text-primary-foreground px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity"
           >
-            Download App
-          </a>
+            Contact
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -75,18 +72,11 @@ export default function Header() {
             </Link>
             <Link
               href="/contact"
-              className="text-foreground hover:text-primary transition-colors font-medium py-2"
+              className="bg-primary text-primary-foreground px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity text-center"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
             </Link>
-            <a
-              href="#download"
-              className="bg-primary text-primary-foreground px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity text-center"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Download App
-            </a>
           </div>
         </div>
       )}
