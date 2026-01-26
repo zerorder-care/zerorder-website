@@ -29,6 +29,13 @@ export default function Contact() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const handleAddressClick = () => {
+    const isKorean = navigator.language.startsWith("ko");
+    const url = isKorean
+      ? "https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%20%EB%8F%99%EB%8C%80%EB%AC%B8%EA%B5%AC%20%ED%9A%8C%EA%B8%B0%EB%A1%9C%20117-3"
+      : "https://www.google.com/maps/search/?api=1&query=%EC%84%9C%EC%9A%B8+%EB%8F%99%EB%8C%80%EB%AC%B8%EA%B5%AC+%ED%9A%8C%EA%B8%B0%EB%A1%9C+117-3";
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -89,52 +96,55 @@ export default function Contact() {
           <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               {/* Email */}
-              <div className="bg-card p-8 rounded-2xl border border-border text-center hover:shadow-lg transition-all duration-300">
+              <a
+                href="mailto:ceo@zerorder.kr"
+                className="bg-card p-8 rounded-2xl border border-border text-center hover:shadow-lg hover:bg-gray-50 hover:border-gray-300 transition-all duration-300 block cursor-pointer"
+              >
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Mail className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">
+                <h3 className="text-xl font-bold text-black mb-2">
                   이메일
                 </h3>
-                <a
-                  href="mailto:ceo@zerorder.kr"
-                  className="text-primary hover:underline"
-                >
+                <span className="text-black">
                   ceo@zerorder.kr
-                </a>
-              </div>
+                </span>
+              </a>
 
               {/* LinkedIn */}
-              <div className="bg-card p-8 rounded-2xl border border-border text-center hover:shadow-lg transition-all duration-300">
+              <a
+                href="https://www.linkedin.com/company/zerorder/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-card p-8 rounded-2xl border border-border text-center hover:shadow-lg hover:bg-gray-50 hover:border-gray-300 transition-all duration-300 block cursor-pointer"
+              >
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Linkedin className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">
+                <h3 className="text-xl font-bold text-black mb-2">
                   LinkedIn
                 </h3>
-                <a
-                  href="https://www.linkedin.com/company/zerorder/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline"
-                >
+                <span className="text-black">
                   zerorder
-                </a>
-              </div>
+                </span>
+              </a>
 
               {/* Address */}
-              <div className="bg-card p-8 rounded-2xl border border-border text-center hover:shadow-lg transition-all duration-300">
+              <button
+                onClick={handleAddressClick}
+                className="bg-card p-8 rounded-2xl border border-border text-center hover:shadow-lg hover:bg-gray-50 hover:border-gray-300 transition-all duration-300 block cursor-pointer w-full"
+              >
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <MapPin className="w-8 h-8 text-accent" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">
+                <h3 className="text-xl font-bold text-black mb-2">
                   주소
                 </h3>
-                <p className="text-muted-foreground">
+                <span className="text-black">
                   서울 동대문구 회기로 117-3<br />
                   서울바이오허브 산업지원동 405호
-                </p>
-              </div>
+                </span>
+              </button>
             </div>
           </div>
         </section>

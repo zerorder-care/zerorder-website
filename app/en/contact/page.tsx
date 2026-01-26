@@ -10,6 +10,10 @@ import Footer from "@/components/Footer";
  */
 
 export default function ContactEN() {
+  const handleAddressClick = () => {
+    window.open("https://www.google.com/maps/search/?api=1&query=Seoul+Bio+Hub+117-3+Hoegi-ro+Dongdaemun-gu+Seoul+Korea", "_blank", "noopener,noreferrer");
+  };
+
   const faqs = [
     {
       question: "When will DoriDori be available?",
@@ -51,53 +55,56 @@ export default function ContactEN() {
           <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               {/* Email */}
-              <div className="bg-card p-8 rounded-2xl border border-border text-center hover:shadow-lg transition-all duration-300">
+              <a
+                href="mailto:ceo@zerorder.kr"
+                className="bg-card p-8 rounded-2xl border border-border text-center hover:shadow-lg hover:bg-gray-50 hover:border-gray-300 transition-all duration-300 block cursor-pointer"
+              >
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Mail className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">
+                <h3 className="text-xl font-bold text-black mb-2">
                   Email
                 </h3>
-                <a
-                  href="mailto:ceo@zerorder.kr"
-                  className="text-primary hover:underline"
-                >
+                <span className="text-black">
                   ceo@zerorder.kr
-                </a>
-              </div>
+                </span>
+              </a>
 
               {/* LinkedIn */}
-              <div className="bg-card p-8 rounded-2xl border border-border text-center hover:shadow-lg transition-all duration-300">
+              <a
+                href="https://www.linkedin.com/company/zerorder/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-card p-8 rounded-2xl border border-border text-center hover:shadow-lg hover:bg-gray-50 hover:border-gray-300 transition-all duration-300 block cursor-pointer"
+              >
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Linkedin className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">
+                <h3 className="text-xl font-bold text-black mb-2">
                   LinkedIn
                 </h3>
-                <a
-                  href="https://www.linkedin.com/company/zerorder/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline"
-                >
+                <span className="text-black">
                   zerorder
-                </a>
-              </div>
+                </span>
+              </a>
 
               {/* Address */}
-              <div className="bg-card p-8 rounded-2xl border border-border text-center hover:shadow-lg transition-all duration-300">
+              <button
+                onClick={handleAddressClick}
+                className="bg-card p-8 rounded-2xl border border-border text-center hover:shadow-lg hover:bg-gray-50 hover:border-gray-300 transition-all duration-300 block cursor-pointer w-full"
+              >
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <MapPin className="w-8 h-8 text-accent" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">
+                <h3 className="text-xl font-bold text-black mb-2">
                   Address
                 </h3>
-                <p className="text-muted-foreground">
+                <span className="text-black">
                   Seoul Bio Hub, Room 405<br />
                   117-3 Hoegi-ro, Dongdaemun-gu<br />
                   Seoul, Korea
-                </p>
-              </div>
+                </span>
+              </button>
             </div>
           </div>
         </section>
