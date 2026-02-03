@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 /**
  * Footer Component
  * Design: Modern Medical Minimalism
@@ -11,6 +13,7 @@ interface FooterProps {
 
 export default function Footer({ locale = "ko" }: FooterProps) {
   const currentYear = new Date().getFullYear();
+  const basePath = locale === "en" ? "/en" : "";
 
   return (
     <footer className="bg-card border-t border-border">
@@ -19,6 +22,23 @@ export default function Footer({ locale = "ko" }: FooterProps) {
         <p className="text-muted-foreground text-sm font-medium mb-4">
           © {currentYear} Zerorder. All rights reserved.
         </p>
+
+        {/* Legal Links */}
+        <div className="flex flex-wrap gap-4 mb-4 text-sm">
+          <Link
+            href={`${basePath}/privacy`}
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
+            {locale === "ko" ? "개인정보처리방침" : "Privacy Policy"}
+          </Link>
+          <span className="text-muted-foreground">|</span>
+          <Link
+            href={`${basePath}/terms`}
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
+            {locale === "ko" ? "이용약관" : "Terms of Service"}
+          </Link>
+        </div>
 
         {/* Company Legal Info */}
         <div className="text-muted-foreground text-xs leading-relaxed opacity-70">
