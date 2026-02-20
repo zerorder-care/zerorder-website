@@ -119,7 +119,7 @@ export default function Header({ locale = "ko" }: HeaderProps) {
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
             <Link
               href={teamPath}
-              className="text-foreground hover:text-primary transition-colors font-medium py-2"
+              className="text-foreground hover:text-primary transition-colors font-medium py-2 text-center"
               onClick={() => setIsMenuOpen(false)}
             >
               Team
