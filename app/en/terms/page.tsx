@@ -34,7 +34,7 @@ export default function TermsEN() {
               {/* Introduction */}
               <div className="mb-12">
                 <p className="text-muted-foreground leading-relaxed">
-                  These Terms of Service (hereinafter "Terms") are intended to define the rights, obligations, responsibilities, and other necessary matters between Zerorder Inc. (hereinafter "Company") and users regarding the use of the DoriDori service (hereinafter "Service") provided by the Company.
+                  These Terms of Service (hereinafter "Terms") are intended to define the rights, obligations, responsibilities, and other necessary matters between Zerorder Co., Ltd. (hereinafter "Company") and users regarding the use of the DoriDori service (hereinafter "Service") provided by the Company.
                 </p>
                 <p className="text-sm text-muted-foreground mt-4">
                   Last Updated: February 3, 2026
@@ -359,7 +359,7 @@ export default function TermsEN() {
                 </p>
                 <div className="space-y-2">
                   <p className="text-foreground">
-                    <strong>Company Name:</strong> Zerorder Inc.
+                    <strong>Company Name:</strong> Zerorder Co., Ltd.
                   </p>
                   <p className="text-foreground">
                     <strong>CEO:</strong> Yejoon Sim

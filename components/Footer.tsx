@@ -54,7 +54,7 @@ export default function Footer({ locale = "ko" }: FooterProps) {
           ) : (
             <>
               <p>
-                Zerorder Inc. | Seoul Bio Hub, 117-3 Hoegi-ro, Dongdaemun-gu, Seoul, Korea | CEO: Yejoon Sim
+                Zerorder Co., Ltd. | Seoul Bio Hub, 117-3 Hoegi-ro, Dongdaemun-gu, Seoul, Korea | CEO: Yejoon Sim
               </p>
               <p className="mt-1">
                 Business Registration No. 764-88-02890

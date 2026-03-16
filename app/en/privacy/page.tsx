@@ -34,7 +34,7 @@ export default function PrivacyEN() {
               {/* Introduction */}
               <div className="mb-12">
                 <p className="text-muted-foreground leading-relaxed">
-                  Zerorder Inc. (hereinafter "Company") complies with the Personal Information Protection Act and related laws to lawfully process and securely manage personal information in order to protect the freedom and rights of data subjects. In accordance with Article 30 of the Personal Information Protection Act, we establish and disclose this Privacy Policy to guide data subjects through the procedures and standards of personal information processing and to promptly and smoothly handle related grievances.
+                  Zerorder Co., Ltd. (hereinafter "Company") complies with the Personal Information Protection Act and related laws to lawfully process and securely manage personal information in order to protect the freedom and rights of data subjects. In accordance with Article 30 of the Personal Information Protection Act, we establish and disclose this Privacy Policy to guide data subjects through the procedures and standards of personal information processing and to promptly and smoothly handle related grievances.
                 </p>
                 <p className="text-sm text-muted-foreground mt-4">
                   Last Updated: February 3, 2026

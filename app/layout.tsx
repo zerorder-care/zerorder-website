@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     "아기 사경",
     "신생아 사경"
   ],
-  authors: [{ name: "Zerorder Inc." }],
-  creator: "Zerorder Inc.",
-  publisher: "Zerorder Inc.",
+  authors: [{ name: "Zerorder Co., Ltd." }],
+  creator: "Zerorder Co., Ltd.",
+  publisher: "Zerorder Co., Ltd.",
   formatDetection: {
     email: false,
     address: false,
