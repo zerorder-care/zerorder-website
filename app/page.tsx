@@ -171,7 +171,7 @@ export default function Home() {
                 <div className="bg-white p-8 rounded-2xl border border-border hover:shadow-lg transition-all duration-300 card-hover">
                   <div className="mb-6 overflow-hidden rounded-xl h-48 relative">
                     <Image
-                      src="/images/doridori_rehab.png"
+                      src="/images/barodori_rehab.png"
                       alt="Stretching exercises"
                       fill
                       className="object-cover"

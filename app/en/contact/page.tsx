@@ -16,8 +16,8 @@ export default function ContactEN() {
 
   const faqs = [
     {
-      question: "When will DoriDori be available?",
-      answer: "We're planning to launch a beta version in early March, with the official release scheduled for early May.",
+      question: "When will BaroDori be available?",
+      answer: "We're planning to launch a beta version in mid-May, with the official release scheduled for early June.",
     },
     {
       question: "Where can I download the app?",

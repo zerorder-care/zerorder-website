@@ -51,7 +51,7 @@ export default function PrivacyEN() {
                   1.1 Personal Information We Collect
                 </h3>
                 <p className="text-muted-foreground mb-4">
-                  The Company collects the following personal information to provide DoriDori services:
+                  The Company collects the following personal information to provide BaroDori services:
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-6">
                   <li><strong>Required Information:</strong> Name, email address, password, mobile phone number</li>
@@ -319,7 +319,7 @@ export default function PrivacyEN() {
                 </h2>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    <strong className="text-foreground">Not a Medical Service:</strong> DoriDori is not a medical device or medical service. This service is an assistive tool to help with infant torticollis rehabilitation and cannot replace professional medical diagnosis and prescription.
+                    <strong className="text-foreground">Not a Medical Service:</strong> BaroDori is not a medical device or medical service. This service is an assistive tool to help with infant torticollis rehabilitation and cannot replace professional medical diagnosis and prescription.
                   </p>
                   <p>
                     <strong className="text-foreground">Consult Medical Professionals:</strong> Important decisions related to your baby&apos;s health should always be made in consultation with medical professionals such as pediatricians and rehabilitation medicine specialists.

@@ -22,7 +22,7 @@ export default function TermsEN() {
               Terms of Service
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              DoriDori Service Terms of Use
+              BaroDori Service Terms of Use
             </p>
           </div>
         </section>
@@ -34,7 +34,7 @@ export default function TermsEN() {
               {/* Introduction */}
               <div className="mb-12">
                 <p className="text-muted-foreground leading-relaxed">
-                  These Terms of Service (hereinafter "Terms") are intended to define the rights, obligations, responsibilities, and other necessary matters between Zerorder Co., Ltd. (hereinafter "Company") and users regarding the use of the DoriDori service (hereinafter "Service") provided by the Company.
+                  These Terms of Service (hereinafter "Terms") are intended to define the rights, obligations, responsibilities, and other necessary matters between Zerorder Co., Ltd. (hereinafter "Company") and users regarding the use of the BaroDori service (hereinafter "Service") provided by the Company.
                 </p>
                 <p className="text-sm text-muted-foreground mt-4">
                   Last Updated: February 3, 2026
@@ -48,7 +48,7 @@ export default function TermsEN() {
                 </h2>
                 <ol className="list-decimal pl-6 space-y-3 text-muted-foreground">
                   <li>
-                    These Terms aim to define the terms and procedures for using the DoriDori service provided by the Company, and the rights, obligations, responsibilities, and other necessary matters between the Company and users.
+                    These Terms aim to define the terms and procedures for using the BaroDori service provided by the Company, and the rights, obligations, responsibilities, and other necessary matters between the Company and users.
                   </li>
                   <li>
                     These Terms apply to all users who wish to use the Service.
@@ -69,7 +69,7 @@ export default function TermsEN() {
                 </p>
                 <ul className="list-disc pl-6 space-y-3 text-muted-foreground">
                   <li>
-                    <strong>&quot;Service&quot;</strong> refers to the infant torticollis rehabilitation support service provided through the DoriDori mobile application and website offered by the Company.
+                    <strong>&quot;Service&quot;</strong> refers to the infant torticollis rehabilitation support service provided through the BaroDori mobile application and website offered by the Company.
                   </li>
                   <li>
                     <strong>&quot;User&quot;</strong> refers to members and non-members who use the Service provided by the Company in accordance with these Terms.

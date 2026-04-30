@@ -33,7 +33,7 @@ export default function HomeEN() {
                 <span className="gradient-text">We&apos;re Here to Help</span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-                DoriDori is an AI-powered home-based therapy solution for infant torticollis rehabilitation. We help families manage rehabilitation comfortably at home.
+                BaroDori is an AI-powered home-based therapy solution for infant torticollis rehabilitation. We help families manage rehabilitation comfortably at home.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="#about" className="button-primary flex items-center justify-center gap-2">
@@ -130,7 +130,7 @@ export default function HomeEN() {
               <div className="bg-white p-8 rounded-2xl border border-border hover:shadow-lg transition-all duration-300 card-hover">
                 <div className="mb-6 overflow-hidden rounded-xl h-48 relative">
                   <Image
-                    src="/images/doridori_rehab.png"
+                    src="/images/barodori_rehab.png"
                     alt="Stretching exercises"
                     fill
                     className="object-cover"
@@ -196,7 +196,7 @@ export default function HomeEN() {
                     AI Technology for Comfortable Home Rehabilitation
                   </h3>
                   <p className="text-lg text-muted-foreground mb-8">
-                    DoriDori leverages cutting-edge AI to support infant torticollis rehabilitation. Our goal is not to replace medical care, but to make home-based therapy more accessible and effective.
+                    BaroDori leverages cutting-edge AI to support infant torticollis rehabilitation. Our goal is not to replace medical care, but to make home-based therapy more accessible and effective.
                   </p>
                   <ul className="space-y-4">
                     <li className="flex items-center gap-3">
@@ -234,7 +234,7 @@ export default function HomeEN() {
         <section className="section-padding bg-white">
           <div className="container mx-auto">
             <h2 className="section-title text-center">
-              Your Journey with DoriDori
+              Your Journey with BaroDori
             </h2>
             <p className="section-subtitle text-center">
               We support you at every step of the rehabilitation process
@@ -252,7 +252,7 @@ export default function HomeEN() {
                   {
                     step: 2,
                     title: "Onboarding",
-                    description: "Set up DoriDori and configure initial settings",
+                    description: "Set up BaroDori and configure initial settings",
                   },
                   {
                     step: 3,
@@ -300,7 +300,7 @@ export default function HomeEN() {
                 Let&apos;s Build Together
               </h2>
               <p className="section-subtitle">
-                Interested in DoriDori or looking to collaborate? We&apos;d love to hear from you.
+                Interested in BaroDori or looking to collaborate? We&apos;d love to hear from you.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="/en/contact" className="button-primary flex items-center justify-center gap-2">
