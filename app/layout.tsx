@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     default: "Zerorder - Infant Torticollis Rehabilitation Solution",
     template: "%s | Zerorder"
   },
-  description: "도리도리는 부모와 아기를 위한 AI 기반 영아 사경 재활 솔루션입니다",
+  description: "바로도리는 부모와 아기를 위한 AI 기반 영아 사경 재활 솔루션입니다",
   keywords: [
     "제로더",
     "Zerorder",

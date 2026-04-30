@@ -57,8 +57,8 @@ export default function Contact() {
 
   const faqs = [
     {
-      question: "도리도리는 언제부터 사용할 수 있나요?",
-      answer: "3월 초 베타 버전을 시작으로, 5월 초에 정식 버전을 출시할 예정입니다.",
+      question: "바로도리는 언제부터 사용할 수 있나요?",
+      answer: "5월 중 베타 버전을 시작으로, 6월 초에 정식 버전을 출시할 예정입니다.",
     },
     {
       question: "앱은 어디서 다운로드할 수 있나요?",

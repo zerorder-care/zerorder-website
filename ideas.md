@@ -1,7 +1,7 @@
 # Zerorder 웹사이트 디자인 에셋 전략
 
 ## 프로젝트 개요
-Zerorder(제로더)는 영아 사경(Infant Torticollis) 재활 솔루션 '도리도리'를 제공하는 헬스테크 스타트업입니다. 스타트업 프로그램(OpenAI, AWS, Notion 등) 지원을 위한 공식 웹사이트를 제작합니다.
+Zerorder(제로더)는 영아 사경(Infant Torticollis) 재활 솔루션 '바로도리'를 제공하는 헬스테크 스타트업입니다. 스타트업 프로그램(OpenAI, AWS, Notion 등) 지원을 위한 공식 웹사이트를 제작합니다.
 
 ## 디자인 철학 및 에셋 계획
 

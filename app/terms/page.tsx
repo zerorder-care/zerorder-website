@@ -22,7 +22,7 @@ export default function Terms() {
               이용약관
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              도리도리 서비스 이용 약관
+              바로도리 서비스 이용 약관
             </p>
           </div>
         </section>
@@ -34,7 +34,7 @@ export default function Terms() {
               {/* Introduction */}
               <div className="mb-12">
                 <p className="text-muted-foreground leading-relaxed">
-                  본 약관은 (주)제로더(이하 "회사")가 제공하는 도리도리 서비스(이하 "서비스")의 이용과 관련하여 회사와 이용자 간의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.
+                  본 약관은 (주)제로더(이하 "회사")가 제공하는 바로도리 서비스(이하 "서비스")의 이용과 관련하여 회사와 이용자 간의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.
                 </p>
                 <p className="text-sm text-muted-foreground mt-4">
                   최종 업데이트: 2026년 2월 3일
@@ -48,7 +48,7 @@ export default function Terms() {
                 </h2>
                 <ol className="list-decimal pl-6 space-y-3 text-muted-foreground">
                   <li>
-                    본 약관은 회사가 제공하는 도리도리 서비스의 이용조건 및 절차, 회사와 이용자 간의 권리, 의무 및 책임사항 기타 필요한 사항을 규정함을 목적으로 합니다.
+                    본 약관은 회사가 제공하는 바로도리 서비스의 이용조건 및 절차, 회사와 이용자 간의 권리, 의무 및 책임사항 기타 필요한 사항을 규정함을 목적으로 합니다.
                   </li>
                   <li>
                     본 약관은 서비스를 이용하고자 하는 모든 이용자에게 적용됩니다.
@@ -69,7 +69,7 @@ export default function Terms() {
                 </p>
                 <ul className="list-disc pl-6 space-y-3 text-muted-foreground">
                   <li>
-                    <strong>"서비스"</strong>란 회사가 제공하는 도리도리 모바일 애플리케이션 및 웹사이트를 통해 제공되는 영아 사경 재활 지원 서비스를 의미합니다.
+                    <strong>"서비스"</strong>란 회사가 제공하는 바로도리 모바일 애플리케이션 및 웹사이트를 통해 제공되는 영아 사경 재활 지원 서비스를 의미합니다.
                   </li>
                   <li>
                     <strong>"이용자"</strong>란 본 약관에 따라 회사가 제공하는 서비스를 이용하는 회원 및 비회원을 말합니다.

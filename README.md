@@ -1,6 +1,6 @@
 # Zerorder Website
 
-Zerorder 웹사이트 - 영아 사경 재활 솔루션 '도리도리' 소개 사이트
+Zerorder 웹사이트 - 영아 사경 재활 솔루션 '바로도리' 소개 사이트
 
 ## 기술 스택
 

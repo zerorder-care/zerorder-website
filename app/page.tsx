@@ -70,11 +70,11 @@ export default function Home() {
             <div className="container mx-auto px-4 relative z-10">
               <div className="max-w-2xl">
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6">
-                  영아 사경<br/>
+                  영아 사경<br />
                   <span className="gradient-text">저희가 함께해요</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-                  도리도리는 AI 기반 Home-Based 테라피로 영아 사경 재활을 돕는 솔루션입니다. 의료를 대신하기보다, 집에서 편하게 재활할 수 있도록 돕는 프로덕트를 만들고 있습니다.
+                  바로도리는 AI 기반 Home-Based 테라피로 영아 사경 재활을 돕는 솔루션입니다. 의료를 대신하기보다, 집에서 편하게 재활할 수 있도록 돕는 프로덕트를 만들고 있습니다.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a href="#about" className="button-primary flex items-center justify-center gap-2">
@@ -237,7 +237,7 @@ export default function Home() {
                       AI 기술로 집에서 편하게 재활할 수 있도록
                     </h3>
                     <p className="text-lg text-muted-foreground mb-8">
-                      도리도리는 최신 AI 기술을 활용하여 영아 사경 재활을 돕는 프로덕트입니다. 의료를 대신하기보다, 집에서 편하게 재활할 수 있도록 돕는 것이 우리의 목표입니다.
+                      바로도리는 최신 AI 기술을 활용하여 영아 사경 재활을 돕는 프로덕트입니다. 의료를 대신하기보다, 집에서 편하게 재활할 수 있도록 돕는 것이 우리의 목표입니다.
                     </p>
                     <ul className="space-y-4">
                       <li className="flex items-center gap-3">
@@ -275,7 +275,7 @@ export default function Home() {
           <section className="section-padding bg-white">
             <div className="container mx-auto">
               <h2 className="section-title text-center">
-                도리도리와 함께하는 재활 여정
+                바로도리와 함께하는 재활 여정
               </h2>
               <p className="section-subtitle text-center">
                 집에서 편하게 재활할 수 있도록, 모든 단계에서 함께합니다
@@ -293,7 +293,7 @@ export default function Home() {
                     {
                       step: 2,
                       title: "온보딩",
-                      description: "도리도리 앱 설치 및 초기 설정",
+                      description: "바로도리 앱 설치 및 초기 설정",
                     },
                     {
                       step: 3,
@@ -341,7 +341,7 @@ export default function Home() {
                   함께 만들어가요
                 </h2>
                 <p className="section-subtitle">
-                  도리도리에 관심이 있으시거나 협업을 원하시면 언제든 연락주세요
+                  바로도리에 관심이 있으시거나 협업을 원하시면 언제든 연락주세요
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a href="/contact" className="button-primary flex items-center justify-center gap-2">

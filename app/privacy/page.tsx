@@ -46,12 +46,12 @@ export default function Privacy() {
                 <h2 className="text-3xl font-bold text-foreground mb-6">
                   1. 개인정보의 수집 항목 및 수집 방법
                 </h2>
-                
+
                 <h3 className="text-2xl font-semibold text-foreground mb-4 mt-8">
                   1.1 수집하는 개인정보의 항목
                 </h3>
                 <p className="text-muted-foreground mb-4">
-                  회사는 도리도리 서비스 제공을 위해 다음과 같은 개인정보를 수집합니다:
+                  회사는 바로도리 서비스 제공을 위해 다음과 같은 개인정보를 수집합니다:
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-6">
                   <li><strong>필수 항목:</strong> 이름, 이메일 주소, 비밀번호, 휴대전화번호</li>
@@ -319,7 +319,7 @@ export default function Privacy() {
                 </h2>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    <strong className="text-foreground">의료 서비스 아님:</strong> 도리도리는 의료기기 또는 의료 서비스가 아닙니다. 본 서비스는 영아 사경 재활을 돕는 보조 도구이며, 전문의의 진단과 처방을 대체할 수 없습니다.
+                    <strong className="text-foreground">의료 서비스 아님:</strong> 바로도리는 의료기기 또는 의료 서비스가 아닙니다. 본 서비스는 영아 사경 재활을 돕는 보조 도구이며, 전문의의 진단과 처방을 대체할 수 없습니다.
                   </p>
                   <p>
                     <strong className="text-foreground">전문의 상담 권장:</strong> 아기의 건강과 관련된 중요한 결정은 반드시 소아과 전문의, 재활의학과 전문의 등 의료 전문가와 상담하시기 바랍니다.
