@@ -2,6 +2,7 @@ import { ArrowRight, CheckCircle, Users, Zap, Brain } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import type { Metadata } from "next";
 
 /**
  * Home Page
@@ -13,36 +14,122 @@ import Image from "next/image";
  * - Clear CTAs throughout
  */
 
+const homeKeywords = [
+  "아기사경",
+  "사경",
+  "아기 사경",
+  "영유아 자세 관리",
+  "신생아 목 기울어짐",
+  "아기 머리 비대칭",
+  "신생아 두상 관리",
+  "기록 관리",
+  "홈케어",
+  "루틴 관리",
+  "보호자 가이드",
+];
+
+const homeDescription =
+  "바로도리는 아기사경, 신생아 목 기울어짐, 아기 머리 비대칭이 걱정되는 보호자를 위한 영유아 자세 관리 홈케어 앱입니다. 기록 관리와 루틴 관리를 돕습니다.";
+
+export const metadata: Metadata = {
+  title: "바로도리 | 아기사경 · 영유아 자세 관리 홈케어",
+  description: homeDescription,
+  keywords: homeKeywords,
+  alternates: {
+    canonical: "/",
+    languages: {
+      ko: "/",
+      en: "/en",
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "ko_KR",
+    url: "https://zerorder.kr",
+    siteName: "제로더",
+    title: "바로도리 | 아기사경 · 영유아 자세 관리 홈케어",
+    description: homeDescription,
+    images: [
+      {
+        url: "/images/hero-baby-parent.jpg",
+        width: 1200,
+        height: 630,
+        alt: "바로도리 아기사경 영유아 자세 관리 홈케어",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "바로도리 | 아기사경 · 영유아 자세 관리 홈케어",
+    description: homeDescription,
+    images: ["/images/hero-baby-parent.jpg"],
+  },
+};
+
 export default function Home() {
   // JSON-LD 구조화된 데이터 (SEO용 - 검색엔진만 읽음)
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "MedicalOrganization",
-    "name": "제로더",
-    "alternateName": "Zerorder",
-    "url": "https://zerorder.kr",
-    "logo": "https://zerorder.kr/images/hero-baby-parent.jpg",
-    "description": "AI 기반 영아 사경 재활 솔루션 제공 기업",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "회기로 117-3 서울바이오허브 산업지원동",
-      "addressLocality": "동대문구",
-      "addressRegion": "서울",
-      "addressCountry": "KR"
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "제로더",
+      alternateName: "Zerorder",
+      url: "https://zerorder.kr",
+      logo: "https://zerorder.kr/images/hero-baby-parent.jpg",
+      description:
+        "아기사경, 영유아 자세 관리, 신생아 목 기울어짐, 아기 머리 비대칭이 걱정되는 보호자를 위한 홈케어 기록 관리 서비스 바로도리를 개발하는 기업",
+      knowsAbout: [
+        "아기사경",
+        "사경",
+        "영유아 자세 관리",
+        "신생아 목 기울어짐",
+        "아기 머리 비대칭",
+        "신생아 두상 관리",
+        "홈케어",
+        "기록 관리",
+        "루틴 관리",
+        "보호자 가이드",
+      ],
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "회기로 117-3 서울바이오허브 산업지원동",
+        addressLocality: "동대문구",
+        addressRegion: "서울",
+        addressCountry: "KR",
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        email: "ceo@zerorder.kr",
+        contactType: "customer service",
+        availableLanguage: ["Korean", "English"],
+      },
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "email": "ceo@zerorder.kr",
-      "contactType": "customer service",
-      "availableLanguage": ["Korean", "English"]
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "바로도리",
+      alternateName: "제로더",
+      url: "https://zerorder.kr",
+      inLanguage: "ko-KR",
+      description: homeDescription,
+      keywords: homeKeywords.join(", "),
     },
-    "medicalSpecialty": "Pediatric Rehabilitation",
-    "offers": {
-      "@type": "Offer",
-      "description": "영아 사경 재활 프로그램",
-      "category": "의료 재활 서비스"
-    }
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      name: "바로도리",
+      applicationCategory: "HealthApplication",
+      operatingSystem: "iOS, Android",
+      description:
+        "영유아 자세 관리, 홈케어 루틴 관리, 기록 관리를 돕는 보호자 가이드 앱",
+      keywords: homeKeywords.join(", "),
+      publisher: {
+        "@type": "Organization",
+        name: "제로더",
+        alternateName: "Zerorder",
+      },
+    },
+  ];
 
   return (
     <>
